@@ -17,6 +17,5 @@ miatoll:
   edition: phosh
   variant: phone
   apilevel: 29
-  use_internal_repository: true
 
   packages: *miatoll_packages
