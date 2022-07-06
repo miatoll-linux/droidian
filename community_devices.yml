@@ -1,0 +1,22 @@
+########################################################################
+# Basic anchors                                                        #
+########################################################################
+
+.miatoll_packages:
+  packages: &miatoll_packages
+    - adaptation-miatoll
+    - adaptation-miatoll-configs
+
+########################################################################
+# Recovery-flashable rootfses                                          #
+########################################################################
+
+miatoll:
+  type: image
+  arch: arm64
+  edition: phosh
+  variant: phone
+  apilevel: 29
+  use_internal_repository: true
+
+  packages: *miatoll_packages
