@@ -194,12 +194,14 @@ jobs:
 
     steps:
       - name: Download artifacts
+        if: ${{ matrix.config.product == 'miatoll' }}
         uses: actions/download-artifact@v3
         with:
           name: droidian-out-${{ matrix.config.product }}-${{ matrix.config.arch }}-${{ matrix.config.edition }}-${{ matrix.config.variant }}-${{ matrix.config.apilevel }}
           path: droidian-ubports-installer
 
       - name: Check if ubports-installer tag already exists
+        if: ${{ matrix.config.product == 'miatoll' }}
         id: ubports_installer_exists
         uses: mukunku/tag-exists-action@v1.0.0
         with:
@@ -208,19 +210,20 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Tag ubports installer snapshot if doesn't exist
-        if: ${{ (startsWith(github.ref, 'refs/tags/droidian') != true) && (steps.ubports_installer_exists.outputs.exists == 'false') }}
+        if: ${{ (startsWith(github.ref, 'refs/tags/droidian') != true) && (steps.ubports_installer_exists.outputs.exists == 'false') && (matrix.config.product == 'miatoll') }}
         uses: tvdias/github-tagger@v0.0.1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           tag: ubports-installer
 
       - name: Prepare ubports installer img files
+        if: ${{ matrix.config.product == 'miatoll' }}
         run: |
           mv droidian-ubports-installer/droidian-UNOFFICIAL*.zip droidian-ubports-installer/droidian-UNOFFICIAL_${{ matrix.config.product }}-${{ matrix.config.arch }}-${{ matrix.config.edition }}-${{ matrix.config.variant }}-${{ matrix.config.apilevel }}.zip
 
       - name: Create ubports installer release
         id: create_nightly
-        if: startsWith(github.ref, 'refs/tags/droidian') != true
+        if: ${{ (startsWith(github.ref, 'refs/tags/droidian') != true) && (matrix.config.product == 'miatoll') }}
         uses: svenstaro/upload-release-action@2.3.0
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}

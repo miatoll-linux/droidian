@@ -1,15 +1,20 @@
-########################################################################
-# Basic anchors                                                        #
-########################################################################
-
 .miatoll_packages:
   packages: &miatoll_packages
     - adaptation-miatoll
     - adaptation-miatoll-configs
 
-########################################################################
-# Recovery-flashable rootfses                                          #
-########################################################################
+rootfs:
+  type: rootfs
+  arch: [arm64]
+  edition: phosh
+  variant: phone
+  apilevel: 29
+
+  bundles:
+    - name: droidian-adaptation-miatoll
+      arch: arm64
+      apilevel: 29
+      packages: *miatoll_packages
 
 miatoll:
   type: image
