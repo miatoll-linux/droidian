@@ -3,7 +3,7 @@
     - adaptation-miatoll
     - adaptation-miatoll-configs
 
-rootfs:
+rootfs_legacy:
   type: rootfs
   arch: [arm64]
   edition: phosh
@@ -11,7 +11,7 @@ rootfs:
   apilevel: 29
 
   bundles:
-    - name: droidian-adaptation-miatoll
+    - name: droidian-adaptation-miatoll-legacy
       arch: arm64
       apilevel: 29
       packages: *miatoll_packages
