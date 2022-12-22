@@ -16,11 +16,18 @@
 #       apilevel: 29
 #       packages: *miatoll_packages
 
-miatoll:
+miatoll-phosh:
   type: image
   arch: arm64
   edition: phosh
   variant: phone
   apilevel: 29
+  packages: *miatoll_packages
 
+miatoll-cutie:
+  type: image
+  arch: arm64
+  edition: cutie
+  variant: phone
+  apilevel: 29
   packages: *miatoll_packages

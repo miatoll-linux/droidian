@@ -1,3 +1,11 @@
+Droidian Miatoll
+========
+
+<p float="left">
+<img src="https://github.com/cutie-shell/cutie-shell-qt5/raw/bookworm/cutie.png" width="100px">
+<img src="https://avatars.githubusercontent.com/u/69109445?s=200&v=4" width="100px">
+</p>
+
 # Installation instructions
 
 - [Installation instructions](#installation-instructions)
