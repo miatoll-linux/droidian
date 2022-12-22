@@ -10,6 +10,9 @@ Droidian Miatoll
 
 - [Installation instructions](#installation-instructions)
   - [Preparations](#preparations)
+  - [Which image to get?](#which-image-to-get)
+       - [Phosh](#phosh)
+       - [Cutie](#cutie)
   - [Installation](#installation)
       - [Linux, Mac:](#linux-mac)
       - [Windows:](#windows)
@@ -21,6 +24,13 @@ Ensure your device has a vendor partition from Android 10 (newer versions will n
 
 
 Download the latest [nighly](https://github.com/miatoll-linux/droidian/releases/tag/nightly) release. It is recommended to ensure that you have the latest fastboot and adb versions.
+
+## Which image to get?
+_Droidian comes with 2 versions or flavours, each one featuring it's own DE. The available flavours are:_
+#### Phosh:
+* The most complete DE available for Droidian. Recommended to get the best experience.
+#### Cutie:
+*  An work in progress DE, with many features not implemented not recommended for daily use, but good for testing and returning feedback. More info at: https://cutie-shell.org/
 
 ## Installation
 
