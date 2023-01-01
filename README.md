@@ -43,7 +43,7 @@ Unzip the downloaded zip archive, reboot your phone to fastboot (by pressing pow
 #### Windows:
 
 * `fastboot.exe flash boot data/boot.img`
-* `fastboot.exe flash dtbo data/dtbo`
+* `fastboot.exe flash dtbo data/dtbo.img`
 * `fastboot.exe flash userdata data/userdata.img`
 
 ## Finalizing installation
